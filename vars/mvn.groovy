@@ -12,7 +12,7 @@ def call(){
             "PATH+JDK=${tool 'openjdk8'}/bin}"]){
                 sh "ls -al $JAVA_HOME"
                 sh 'mvn --version'
-                sh "mvn clean ${params.testType} -Dmaven.test.failure.ignore=true" //keep going on by yello light
+                sh "mvn clean test -Dmaven.test.failure.ignore=true" //keep going on by yello light
             }
         }
         stage('report') {
