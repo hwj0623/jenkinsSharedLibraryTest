@@ -1,8 +1,8 @@
 //vars/mavne_build.groovy
 
-properties([parameters([string(defaultValue: 'test', description: 'test or verify', name: 'testType', trim: false)])])
 
 def call(){
+    properties([parameters([string(defaultValue: 'test', description: 'test or verify', name: 'testType', trim: false)])])
 
     node{
         checkout scm
